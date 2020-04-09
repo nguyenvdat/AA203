@@ -46,6 +46,14 @@ else
     while ( abs(dichotomyFuncTMed) > epsDichotomy && iterDichotomy < iterDichotomyMax )
         % TODO: Implement dichotomic search. See initialization in 
         % lines 32-37 for reference. 
+        if dichotomyFuncTMed > 0
+            tA = tMed;
+        else
+            tB = tMed;
+        end
+        tMed = (tA + tB)/2.;
+        dichotomyFuncTMed = dichotomyFunc(tMed);
+        iterDichotomy = iterDichotomy + 1;
     end
     tf = tMed;
 

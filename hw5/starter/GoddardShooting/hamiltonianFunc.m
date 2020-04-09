@@ -6,8 +6,12 @@ global g;
 global b;
 global uMax;
 
-phi = % TODO compute phi
+phi = pv/m - pm*b; % TODO compute phi
 
 % TODO use phi to compute control action
+u = 0.0;
+if phi < 0
+    u = uMax;
+end
 
-H = % TODO Return Hamiltonian H(y,v,m,ph,pv,pm)
+H = py*v + pv*(u/m - g) + pm*(-b*u);% TODO Return Hamiltonian H(y,v,m,ph,pv,pm)
