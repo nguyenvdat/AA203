@@ -3,7 +3,7 @@
 clear all; clf; clc; format long;
 
 % Parameters
-global N; N = ; % Choose here the number of discretization points
+global N; N = 50; % Choose here the number of discretization points
 global mu; mu = 3.9915e14;
 global rE; rE = 6378145;
 global h0; h0 = 7500;

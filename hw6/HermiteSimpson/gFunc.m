@@ -5,4 +5,4 @@ function g = gFunc(y)
 global mu;
 global rE;
 
-g = mu/((rE + y)*(rE + y));
+g = mu./((rE + y).*(rE + y));
